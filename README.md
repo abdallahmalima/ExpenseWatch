@@ -172,7 +172,7 @@ Feel free to give it a start
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Gregoire Vella on Behance for the design
+I would like to thank [Gregoire Vella](https://www.behance.net/gregoirevella) on [Behance for the design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
