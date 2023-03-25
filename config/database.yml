@@ -23,9 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database:  expensewatch_development
-  username:  expensewatch
-  password: <%= ENV["EXPENSE_WATCH_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -83,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: expensewatch_production
-  username: expensewatch
-  password: <%= ENV["EXPENSE_WATCH_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
