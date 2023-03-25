@@ -10,19 +10,19 @@
       <% if current_user %>
         <%= link_to categories_path do %>
           <button type='button' name='signup' class='btn'>
-            Home
+            HOME
           </button>
         <% end %>
       <% else %>
         <%= link_to new_user_session_path do %>
           <button type='button' name='login' class='btn'>
-            Login
+            LOGIN
           </button>
         <% end %>
       <% end %>
       <%= link_to new_user_registration_path do %>
-        <button type='button' name='signup' class='btn'>
-          Sign up
+        <button type='button' name='signup' class='btn signup'>
+          SIGN UP
         </button>
       <% end %>
     </div>
