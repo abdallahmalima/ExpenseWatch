@@ -24,7 +24,6 @@ default: &default
 development:
   <<: *default
   database: ExpenseWatch_development
-  host: localhost
   username: postgres
   password: <%= ENV["EXPENSE_WATCH_DATABASE_PASSWORD"] %>
 
@@ -61,7 +60,6 @@ development:
 test:
   <<: *default
   database: ExpenseWatch_test
-  host: localhost
   username: postgres
   password: <%= ENV["EXPENSE_WATCH_DATABASE_PASSWORD"] %>
 
@@ -88,5 +86,5 @@ test:
 production:
   <<: *default
   database: ExpenseWatch_production
-  username: ExpenseWatch
-  password: <%= ENV["EXPENSEWATCH_DATABASE_PASSWORD"] %>
+  username: postgres
+  password: <%= ENV["EXPENSE_WATCH_DATABASE_PASSWORD"] %>
