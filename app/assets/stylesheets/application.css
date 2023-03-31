@@ -166,7 +166,7 @@ nav button[type="submit"] {
   background: var(--secondary);
 }
 
-.welcome-btn-container .signup {
+.welcome-btn-container {
   background: var(--general);
   border: none;
   color: var(--text-color);
