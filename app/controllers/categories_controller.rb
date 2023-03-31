@@ -38,7 +38,17 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    new_category = Group.new(name: params[:name], author_id: current_user.id)
+    new_category = Group.new(name: category_params[:name], icon: category_params[:icon], author_id: current_user.id)
+
+    if category_params[:icon].present?
+      icon_filename = SecureRandom.hex + File.extname(category_params[:icon].original_filename)
+      icon_path = Rails.root.join('public', 'uploads', 'icons', icon_filename)
+
+      File.binwrite(icon_path, category_params[:icon].read)
+
+      new_category.icon = "/uploads/icons/#{icon_filename}"
+    end
+
     if new_category.save
       flash[:success] = 'Category has been created'
       redirect_to categories_path
@@ -46,5 +56,12 @@ class CategoriesController < ApplicationController
       flash.now[:error] = 'Category could not be saved'
       render new
     end
+  end
+
+
+  private
+
+  def category_params
+    params.require(:group).permit(:name, :icon)
   end
 end

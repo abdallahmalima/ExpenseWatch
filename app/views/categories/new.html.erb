@@ -10,10 +10,13 @@
 </header>
 
 <div class='form-container flex f-width add-new'>
-  <%= form_with model: @dealings, url: categories_path do |f| %>
-    <%= f.text_field :name, placeholder: 'Category' %>
-    <div class="actions flex row f-width">
-      <%= f.submit %>
-    </div>
-  <% end %>
+<%= form_with model: @category, url: categories_path, multipart: true do |f| %>
+  <%= f.text_field :name, placeholder: 'Category' %>
+  <%= f.label :Upload_icon %>
+  <%= f.file_field :icon, placeholder: 'Icon' %>
+  <div class="actions flex row f-width">
+  <%= f.submit %>
+  </div>
+<% end %>
+
 </div>
