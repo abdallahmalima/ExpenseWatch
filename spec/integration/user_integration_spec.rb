@@ -15,11 +15,11 @@ RSpec.describe 'users tests', type: :system do
     end
 
     it 'shows login button' do
-      expect(page).to have_content('Login')
+      expect(page).to have_content('LOGIN')
     end
 
     it 'shows signup button' do
-      expect(page).to have_content('Sign up')
+      expect(page).to have_content('SIGN UP')
     end
 
     it 'shows welcome message' do
