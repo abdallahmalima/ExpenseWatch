@@ -162,6 +162,10 @@ nav button[type="submit"] {
   padding: 0.5rem;
 }
 
+.create-container button{
+  background: var(--secondary);
+}
+
 .welcome-btn-container .signup {
   background: var(--general);
   border: none;
@@ -176,6 +180,11 @@ nav button[type="submit"] {
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.border-btn {
+  border: 2px solid  #fff;
+  padding: 11px;
 }
 
 .welcome-btn-container button {
