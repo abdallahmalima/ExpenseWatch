@@ -162,11 +162,11 @@ nav button[type="submit"] {
   padding: 0.5rem;
 }
 
-.create-container button{
+.create-container button {
   background: var(--secondary);
 }
 
-.welcome-btn-container {
+.welcome-btn-container .signup {
   background: var(--general);
   border: none;
   color: var(--text-color);
