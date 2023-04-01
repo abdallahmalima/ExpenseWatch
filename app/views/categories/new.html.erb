@@ -1,0 +1,22 @@
+<header class='flex f-width create-category'>
+  <nav class='flex row f-width'>
+    <%= link_to categories_path do %>
+      <span class="material-symbols-outlined">
+        arrow_left
+      </span>
+    <% end %>
+    <h1>New Category</h1>
+  </nav>
+</header>
+
+<div class='form-container flex f-width add-new'>
+<%= form_with model: @category, url: categories_path, multipart: true do |f| %>
+  <%= f.text_field :name, placeholder: 'Category' %>
+  <%= f.label :Upload_icon %>
+  <%= f.file_field :icon, placeholder: 'Icon' %>
+  <div class="actions flex row f-width">
+  <%= f.submit %>
+  </div>
+<% end %>
+
+</div>
