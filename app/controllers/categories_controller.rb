@@ -53,7 +53,7 @@ class CategoriesController < ApplicationController
       flash[:success] = 'Category has been created'
       redirect_to categories_path
     else
-      flash.now[:error] = 'Category could not be saved'
+      flash.now[:error] = 'Category could not be savedd'
       render new
     end
   end
