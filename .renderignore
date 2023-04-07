@@ -1,1 +1,3 @@
-public
+# Ignore the public and tmp folders
+/public
+/tmp
