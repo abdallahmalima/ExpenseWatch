@@ -1,2 +1,2 @@
-# Ignore the public and tmp folders
+# Ignore the images upload folder
 public/uploads/icons
