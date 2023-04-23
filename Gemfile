@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.3'
+ruby '3.1.2'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
@@ -97,3 +97,5 @@ gem 'uniform_notifier'
 gem 'factory_bot_rails'
 
 gem 'faker'
+
+gem 'thin'

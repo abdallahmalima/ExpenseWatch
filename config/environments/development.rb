@@ -79,4 +79,13 @@ config.action_mailer.smtp_settings = {
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  config.active_storage.service = :disk
+
+if Rails.env.development?
+  Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+else
+  Rails.application.routes.default_url_options[:host] = 'expensewatch.onrender.com'
+end
+
 end

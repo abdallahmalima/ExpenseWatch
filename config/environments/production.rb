@@ -90,4 +90,11 @@ config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || 
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  if Rails.env.development?
+    Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+  else
+    Rails.application.routes.default_url_options[:host] = 'expensewatch.onrender.com'
+  end
+  
 end
